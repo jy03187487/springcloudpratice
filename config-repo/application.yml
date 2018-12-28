@@ -1,0 +1,66 @@
+spring:
+  profiles.active: dev
+  jpa.hibernate.ddl-auto: update
+  jpa.database: MYSQL
+  datasource.platform: mysql
+  jpa.properties.hibernate.hbm2ddl.auto: update
+  jmx:
+    default-domain: DMS
+  datasource.url: jdbc:mysql://192.168.50.11:3306/xidian?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=true
+  datasource.username: root
+  datasource.password: 6yhn&UJM
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    druid:
+      min-idle: 1
+      initial-size: 10
+      max-active: 500
+      remove-abandoned: true
+      remove-abandoned-timeout: 1800
+      max-wait: 60000
+      log-abandoned: true
+      stat-view-servlet:
+        enabled: true
+        login-username: admin
+        login-password: 123456
+        #连接地址：127.0.0.1:8088/druid/index.html
+  #show sql
+  jpa.show-sql: false
+  http:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+  #spring data redis
+  redis:
+    host: 192.168.50.11
+    port: 6379
+    database: 0
+    timeout: 0
+    pool:
+      max-active: 8
+      max-idle: 8
+      max-wait: -1
+      min-idle: 0
+  #rabbitmq
+  rabbitmq:
+    host: 192.168.50.11
+    port: 5672
+    username: test
+    password: 123456
+    virtual-host: /
+    connection-timeout: 0
+    template:
+      mandatory: false
+#opcua 地址
+opucaUrl: 192.168.50.11:8080/OPCUAClient
+#mybatis
+mybatis:
+  mapperLocations: classpath*:com/dms/mapper/*.xml
+  type-aliases-package: com.dms.entity.*
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+upcua:
+  port: 8080
+  ip: 127.0.0.1
