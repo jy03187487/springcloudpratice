@@ -6,7 +6,7 @@ spring:
   jpa.properties.hibernate.hbm2ddl.auto: update
   jmx:
     default-domain: DMS
-  datasource.url: jdbc:mysql://192.168.50.11:3306/xidian?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=true
+  datasource.url: jdbc:mysql://192.168.50.11:3306/charge?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=true
   datasource.username: root
   datasource.password: 6yhn&UJM
   datasource:
